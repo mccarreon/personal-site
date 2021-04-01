@@ -1,5 +1,5 @@
 # Matt's Personal Site!
-This project will be for my personal portfolio website! 
+This project will be for my personal portfolio website.
 
 # Objectives
 * Learn more React
