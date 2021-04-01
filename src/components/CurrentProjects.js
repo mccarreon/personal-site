@@ -1,22 +1,62 @@
 import { Row, Header, Title, Project, Description } from './styles';
+import { VerticalLine, List, TechTitle } from './styles';
+import { LogoGithub } from 'react-ionicons';
 
 const CurrentProjects = () => {
   return (
     <div className="current-projects">
-      <Header>Current Projects</Header>
+      <Header>In-Progress Personal Projects</Header>
       <Row>
         <Project>
           <Title>This Website!</Title>
-          <Description>A simple landing page to show you who I am.</Description>
-          <Description>Technologies: ReactJS, styled-components, docker, nginx</Description>
+          <Description>A simple landing page to get to know me.</Description>
+          <TechTitle>Tech Stack</TechTitle>
+          <List>
+            <li>ReactJS</li>
+            <li>HTML/CSS</li>
+            <li>nginx</li>
+            <li>styled-components</li>
+          </List>
+          <a href="https://github.com/mccarreon/personal-site"><LogoGithub
+            color={'#00000'} 
+            title={"Portfolio Github"}
+            height="25px"
+            width="25px"
+          /></a>
         </Project>
+        <VerticalLine />
         <Project>
           <Title>My Remote Server</Title>
-          <Description>I like to self-host a lot of things as a hobby (like this site).</Description>
+          <Description>A remote server that I use to self-host webapps (like this site).</Description>
+          <TechTitle>Tech Stack</TechTitle>
+          <List>
+            <li>docker</li>
+            <li>traefik</li>
+            <li>authelia (SSO)</li>
+          </List>
+          <a href="https://github.com/mccarreon/remote-server"><LogoGithub
+            color={'#00000'} 
+            title={"Portfolio Github"}
+            height="25px"
+            width="25px"
+          /></a>
         </Project>
+        <VerticalLine />
         <Project>
           <Title>The Line At Riley's!</Title>
-          <Description>Test</Description>
+          <Description>A website to display a user-submitted photo of the line at Riley's (Chico, CA)</Description>
+          <TechTitle>Tech Stack</TechTitle>
+          <List>
+            <li>ReactJS</li>
+            <li>FastAPI</li>
+            <li>MongoDB</li>
+          </List>
+          <a href="https://github.com/mccarreon/thelineatrileys"><LogoGithub
+            color={'#00000'} 
+            title={"Portfolio Github"}
+            height="25px"
+            width="25px"
+          /></a>
         </Project>
       </Row>
     </div>
