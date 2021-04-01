@@ -1,19 +1,17 @@
-# pull base image
-FROM tiangolo/node-frontend:10 as build-stage
+FROM node:10 AS builder
 
-# set working directory
 WORKDIR /app
 
-COPY package*.json /app/
+COPY . .
 
-RUN npm install
+RUN npm install && npm build
 
-COPY ./ /app/
+FROM nginx:alpine
 
-RUN npm run build
+WORKDIR /usr/share/nginx/html
 
-FROM nginx:1.15
+RUN rm -rf ./*
 
-COPY --from=build-stage /app/build /usr/share/nginx/html
-COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+COPY --from=builder /app/build .
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
