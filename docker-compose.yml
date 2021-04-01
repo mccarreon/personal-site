@@ -8,14 +8,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - '6969:80'
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.portfolio.rule=Host(`portoflio.matt.quest`)'
       - 'traefik.http.routers.portfolio.entrypoints=https'
       - 'traefik.http.routers.portfolio.tls=true'
       - 'traefik.http.routers.portfolio.tls.certresolver=letsencrypt'
+    expose:
+      - 80
     restart: unless-stopped
 
 networks:
