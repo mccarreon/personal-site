@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=DotGothic16');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 .App{
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: 'DotGothic16';
+  font-family: 'Lato';
+  height: 50%;
 }
 
 .banner {
   text-align: center;
-  font-size: 48px;
 }
 
 .content {
@@ -18,5 +18,11 @@
 }
 
 .clark {
-  height: 50vh;
+  height: 550px;
+}
+
+@media screen and ( max-width: 500px ) {
+  .banner {
+    font-size: 32px;
+  }
 }
