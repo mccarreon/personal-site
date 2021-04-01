@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  sample-prod:
+    container_name: portfolio-site
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '6969:80'
