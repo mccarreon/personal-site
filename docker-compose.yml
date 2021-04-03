@@ -20,4 +20,5 @@ services:
 
 networks:
   net:
+    name: "net"
     external: true
